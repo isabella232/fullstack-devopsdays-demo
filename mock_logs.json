@@ -1,0 +1,42 @@
+[
+  {
+    "level": "CRITICAL",
+    "message": "500 Internal Server Error - Exceeded Memory"
+  },
+  {
+    "level": "WARN",
+    "message": "403 Forbidden GET /api/v1/secret_key"
+  },
+  {
+    "level": "WARN",
+    "message": "400 Bad Request POST /api/v1/posts/304"
+  },
+  {
+    "level": "INFO",
+    "message": "200 OK GET /api/v1/users"
+  },
+  {
+    "level": "INFO",
+    "message": "200 OK GET /api/v1/users/123"
+  },
+  {
+    "level": "INFO",
+    "message": "200 OK GET /api/v1/users/839"
+  },
+  {
+    "level": "DEBUG",
+    "message": "OPTIONS /index.html HTTP/1.1"
+  },
+  {
+    "level": "DEBUG",
+    "message": "OPTIONS /main/index.html HTTP/1.1"
+  },
+  {
+    "level": "DEBUG",
+    "message": "OPTIONS /checkout/index.html HTTP/1.1"
+  },
+  {
+    "level": "DEBUG",
+    "message": "OPTIONS /products/index.html HTTP/1.1"
+  }
+]
