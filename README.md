@@ -1,21 +1,46 @@
 # Feature Flag - Configure Logging Demo
 
-## Getting Started
+This demo shows how Optimizely Fullstack can be used to control one (or multiple) logging service's batch sizes.
 
-- Clone the repo
-- Navigate to the root of the repo
-- `pip install optimizely-sdk`
-- `python run.py`
-- or to run multiple services, run `python run_multiple.py`
+## Getting Started with this Example Application
 
-## Configuration
+1. Clone this repo
+2. Navigate to the root of the repo
+3. Create a virtual environment `venv`:
+  - `virtualenv venv`
+  - `. venv/bin/activate`
+4. Install the Optimizely Python SDK:
+  - `pip install optimizely-sdk`
+5. To run a single logging service: 
+  - `python run.py`
+   To run multiple logging services: 
+  - `python run_multiple.py`
 
-### with your own Optimizely Project
+## Getting Started with your Optimizely Fullstack Project
+1. Sign up for a free trial of Optimizely Fullstack [here](optimizely.com/free-trial)
+  - Follow all of the prompts
+2. Create your first Optimizely Fullstack Project, name it whatever you like
 
-- Create a Full Stack project
-- Change the SDK key in `logging_service.py`
-- Create a feature flag called `log_batching`
-- Create a feature variable for the above feature called `batch_size`
+
+### Configure your Feature Flag
+1. Find your production SDK key under 'Settings'
+  - update the SDK key on line 7 of `logging_service.py` (aside: move this to an environment variable if you plan on committing your example app)
+2. Create a Feature Flag
+  - 'Features' > 'Create New Feature'
+  - Enter `log_batching` as the feature key
+  - Add a feature variable called `batch_size`
+    - `Variable Key: batch_size`, `Type: Integer`, `Default Value: 20`
+
+### Toggle your Feature Flag On/Off
+1. Select 'Environment' as `Production`
+2. Toggle the feature `on`
+3. Roll it out to 100% of traffic
+4. See what happens :) 
+
+### Optional: Partial Rollout 
+1. Roll out your feature to some percentage (try 50%) of traffic
+  - maybe change your `batch_size` to 10 to speed up the demo 
+2. run `python run_multiple.py` to see what happens
 
 ## Under the Hood
 
